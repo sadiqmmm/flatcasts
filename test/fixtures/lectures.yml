@@ -4,15 +4,17 @@ How_To_Create_Music_With_Code:
   title: "How To Create Music With Code [Such Great Heights by Postal Service]"
   topic: "Sonic Pi"
   url: "https://www.youtube.com/watch?v=9LDxP2W6hkw"
-  length: "1:00:04"
-  date_added: "June 28, 2016"
+  duration: "1:00:04"
+  published: "June 28, 2016"
+  embed: 'iframe width=\"480\" height=\"360\" src=\"//www.youtube.com/embed/9LDxP2W6hkw\" frameborder=\"0\" allowfullscreen></iframe>'
 
 Yield_And_Enumerables:
   title: "Yield And Enumerables"
   topic: "Ruby"
   url: "https://www.youtube.com/watch?v=t2A6xPbh0I8"
-  length: "37:18"
-  date_added: "December 16, 2015"
+  duration: "37:18"
+  published: "December 16, 2015"
+  embed: 'iframe width=\"480\" height=\"360\" src=\"//www.youtube.com/embed/9LDxP2W6hkw\" frameborder=\"0\" allowfullscreen></iframe>'
 
 
 

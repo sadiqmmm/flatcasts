@@ -5,16 +5,17 @@ class LectureTest < ActiveSupport::TestCase
     @lecture_defaults = {
       title:        'Facebook Authentication',
       topic:      'This will show how to create a new facebook application and configure it. Then add some authentication with the omniauth-facebook gem and top it off with a client-side authentication using the JavaScript SDK.',
-      length:     '12:09',
+      duration:     '12:09',
       url:         'http://railscasts.com/episodes/360-facebook-authentication',
-      date_added: Date.parse('Mon, 25 Jun 2012 00:00:00 -0700')
+      published: Date.parse('Mon, 25 Jun 2012 00:00:00 -0700'),
+      embed: 'iframe width=\"480\" height=\"360\" src=\"//www.youtube.com/embed/9LDxP2W6hkw\" frameborder=\"0\" allowfullscreen></iframe>'
     }
   end
 
   test "should be invalid if missing required data" do
     lecture = Lecture.new
     assert !lecture.valid?
-    [:title, :topic, :length, :url, :date_added].each do |field_name|
+    [:title, :topic, :duration, :url, :published, :embed].each do |field_name|
       assert lecture.errors.keys.include? field_name
     end
   end
