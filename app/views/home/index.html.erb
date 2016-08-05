@@ -1,7 +1,8 @@
 <div ng-controller="LecturesCtrl">
   <div id="lecture-list-container">
     <ul>
-      <li ng-repeat="lecture in lectures">
+      <li ng-repeat="lecture in lectures"
+          ng-click="showLecture(lecture)">
         <h3>{{lecture.title}} <small>({{lecture.duration}})</small></h3>
       </li>
     </ul>

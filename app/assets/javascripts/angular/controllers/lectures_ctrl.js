@@ -1,5 +1,9 @@
 App.controller('LecturesCtrl', [
   '$scope', 'Lecture', function($scope, Lecture) {
-    return $scope.lectures = Lecture.query();
+    $scope.lectures = Lecture.query();
+    $scope.selectedLecture = null;
+    return $scope.showLecture = function(lecture) {
+      return $scope.selectedLecture = lecture;
+    };
   }
 ]);
