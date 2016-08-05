@@ -1,5 +1,5 @@
 App.controller('LecturesCtrl', [
-  '$scope', function($scope) {
-    return $scope.message = "Flatiron Rocks!";
+  '$scope', 'Lecture', function($scope, Lecture) {
+    return $scope.lectures = Lecture.query();
   }
 ]);
