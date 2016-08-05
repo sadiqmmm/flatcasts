@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20160805044949) do
     t.string   "title"
     t.string   "topic"
     t.string   "url"
-    t.string   "length"
-    t.string   "date_added"
+    t.string   "duration"
+    t.string   "published"
+    t.string   "embed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

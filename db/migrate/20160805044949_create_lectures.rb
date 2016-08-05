@@ -4,8 +4,9 @@ class CreateLectures < ActiveRecord::Migration
       t.string :title
       t.string :topic
       t.string :url
-      t.string :length
-      t.string :date_added
+      t.string :duration
+      t.string :published
+      t.string :embed
 
       t.timestamps null: false
     end

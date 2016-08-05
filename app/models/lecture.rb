@@ -1,5 +1,5 @@
 class Lecture < ActiveRecord::Base
-  validates_presence_of :title, :topic, :length, :url, :date_added
+  validates_presence_of :title, :topic, :duration, :url, :published, :embed
   validates_uniqueness_of :url
 
   def self.import_youtube(url)
