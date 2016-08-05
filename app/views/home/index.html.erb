@@ -13,7 +13,8 @@
     <p>{{selectedLecture.topic}}</p>
     <p>
       Published at {{selectedLecture.published | date: 'mediumDate'}}
-      - <a ng-href="{{selectedLecture.url}}">{{selectedLecture.url}}</a>
+      - <a ng-href="{{selectedLecture.url}}">{{selectedLecture.url}}</a> <br>
+      <youtube-video video-id="theBestVideo"></youtube-video>
     </p>
   </div>
 </div>

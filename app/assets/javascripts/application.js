@@ -16,5 +16,6 @@
 //= require angular
 //= require angular-resource
 //= require local_time
+//= require angular-youtube-embed
 //= require app
 //= require_tree ./angular
