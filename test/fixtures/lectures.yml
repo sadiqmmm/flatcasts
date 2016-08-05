@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 How_To_Create_Music_With_Code:
-  title: "How To Create Music With Code ["Such Great Heights" by Postal Service]"
+  title: "How To Create Music With Code [Such Great Heights by Postal Service]"
   topic: "Sonic Pi"
   url: "https://www.youtube.com/watch?v=9LDxP2W6hkw"
   length: "1:00:04"
