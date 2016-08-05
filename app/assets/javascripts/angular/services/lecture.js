@@ -1,7 +1,7 @@
-App.factory('Lecture', [
-  '$resource', function($resource) {
+function Lecture($resource) {
     return $resource('/api/lectures/:id', {
       id: '@id'
     });
-  }
-]);
+  };
+
+angular.module('Flatcasts').factory('Lecture', Lecture);

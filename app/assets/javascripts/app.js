@@ -1,1 +1,1 @@
-window.App = angular.module('Flatcasts', ['ngResource', 'youtube-embed'])
+angular.module('Flatcasts', ['ngResource', 'youtube-embed'])
