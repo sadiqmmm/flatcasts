@@ -7,6 +7,7 @@ class CreateLectures < ActiveRecord::Migration
       t.string :duration
       t.string :published
       t.string :embed
+      t.string :video_id
 
       t.timestamps null: false
     end

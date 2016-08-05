@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160805044949) do
     t.string   "duration"
     t.string   "published"
     t.string   "embed"
+    t.string   "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
