@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     get "/lectures(.:format)" => "lectures#index"
     get "/lectures/:id(.:format)" => "lectures#show"
   end
+
+  root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
