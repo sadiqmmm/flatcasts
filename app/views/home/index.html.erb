@@ -6,4 +6,13 @@
       </li>
     </ul>
   </div>
+
+  <div id="lecture-view-container" ng-show="selectedLecture">
+    <h2>{{selectedLecture.title}}</h2>
+    <p>{{selectedLecture.topic}}</p>
+    <p>
+      Published at {{selectedLecture.published | date: 'mediumDate'}}
+      - <a ng-href="{{selectedLecture.url}}">{{selectedLecture.url}}</a>
+    </p>
+  </div>
 </div>
