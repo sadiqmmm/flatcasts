@@ -3,19 +3,19 @@ class Lecture < ActiveRecord::Base
   validates_uniqueness_of :url
 
   def self.import_youtube(url, topic)
-
-    binding.pry
     video = Yt::Video.new url: url
     title = video.title
     topic = topic
     url = url
-    duration = video.duration
-    published = video.published_at
+    duration = [video.duration / 3600, video.duration / 60 % 60, video.duration % 60].map { |t| t.to_s.rjust(2,'0') }.join(':')
+    published = video.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p") + " EST"
     embed = video.embed_html
 
-    lecture.new(title: title, topic: topic, url: url, duration: duration, published: published, embed: embed)
+    Lecture.create(title: title, topic: topic, url: url, duration: duration, published: published, embed: embed)
   end
 
-  # https://www.youtube.com/watch?v=t2A6xPbh0I8
+  # Lecture.import_youtube('https://www.youtube.com/watch?v=t2A6xPbh0I8', 'Ruby')
+
+  # Lecture.import_youtube('https://www.youtube.com/watch?v=9LDxP2W6hkw', 'Sonic Pi')
 
 end
