@@ -5,6 +5,7 @@ class CreateLectures < ActiveRecord::Migration
       t.string :topic
       t.string :url
       t.string :length
+      t.string :date_added
 
       t.timestamps null: false
     end
