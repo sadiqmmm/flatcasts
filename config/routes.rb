@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :lectures
+  scope :api do
+    get "/lectures(.:format)" => "lectures#index"
+    get "/lectures/:id(.:format)" => "lectures#show"
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
