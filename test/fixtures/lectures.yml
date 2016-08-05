@@ -1,15 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  topic: MyString
-  url: MyString
-  length: MyString
-  date_added: MyString
+How_To_Create_Music_With_Code:
+  title: "How To Create Music With Code ["Such Great Heights" by Postal Service]"
+  topic: "Sonic Pi"
+  url: "https://www.youtube.com/watch?v=9LDxP2W6hkw"
+  length: "1:00:04"
+  date_added: "June 28, 2016"
 
-two:
-  title: MyString
-  topic: MyString
-  url: MyString
-  length: MyString
-  date_added: MyString
+Yield_And_Enumerables:
+  title: "Yield And Enumerables"
+  topic: "Ruby"
+  url: "https://www.youtube.com/watch?v=t2A6xPbh0I8"
+  length: "37:18"
+  date_added: "December 16, 2015"
+
+
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
