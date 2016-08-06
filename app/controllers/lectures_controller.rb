@@ -9,13 +9,8 @@ class LecturesController < ApplicationController
   end
 
   def create
-    @lecture = Lecture.import_youtube(lecture_params)
-    binding.pry
-    @lecture.save
-  end
-
-  private
-  def lecture_params
-    params.require(:lecture).permit(:url, :topic)
+    url = params[:data][:url]
+    topic = params[:data][:topic]
+    Lecture.import_youtube(url, topic)
   end
 end

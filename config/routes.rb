@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope :api do
     get "/lectures(.:format)" => "lectures#index"
     get "/lectures/:id(.:format)" => "lectures#show"
+    post "/lectures" => "lectures#create"
   end
 
   root to: "home#index"

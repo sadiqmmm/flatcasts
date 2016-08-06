@@ -1,16 +1,25 @@
-this.CreateLectureCtrl = function($scope, $location, lectureData) {
-  $scope.data = lectureData.data;
-  lectureData.loadLectures();
-  $scope.formData = {
-    newLectureUrl: '',
-    newLectureTopic: ''
-  };
-  $scope.navNewLecture = function() {
-    return $location.url('/lectures/create');
-  };
-  return $scope.navHome = function() {
-    return $location.url('/');
-  };
+function CreateLectureCtrl($scope, $http) {
+  // create a blank object to handle form data.
+    $scope.lecture = {};
+  // calling our submit function.
+    $scope.submitForm = function() {
+    $http({
+      method  : 'POST',
+      url     : '/api/lectures',
+      data    : { data: $scope.lecture }
+     })
+      .success(function(data) {
+        if (data.errors) {
+          // Showing errors.
+          $scope.errorContent = data.errors.errorContent;
+        } else {
+          $scope.lecture = data.lecture;
+        }
+      });
+    };
 };
 
-this.CreateLectureCtrl.$inject = ['$scope', '$location', 'lectureData'];
+angular.module('Flatcasts').controller('CreateLectureCtrl', CreateLectureCtrl);
+
+
+// https://www.youtube.com/watch?v=tf9l4tSDp6M

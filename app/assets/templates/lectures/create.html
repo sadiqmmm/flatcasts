@@ -1,10 +1,14 @@
 <div class="col-md-6 well">
   <h1 class="text-center">Add new lecture</h1>
-  <form>
-    <label><strong>YouTube Url</strong></label>
-    <input ng-model="formData.newLectureUrl" placeholder="Add YouTube URL" type="text"><br>
-    <label><strong>Topic</strong></label>
-    <input type="text" ng-model="formData.newLectureTopic" placeholder="Add the topic here eg. Ruby"></input> <br>
-    <button class="btn btn-primary" ng-click="createLecture()">Create</button>
-  </form>
+  <div ng-controller="CreateLectureCtrl">
+    <form name="lectureForm" ng-submit="submitForm()">
+      <div class="form-group">
+        <label>Url</label>
+        <input type="text" name="url" class="form-control" ng-model="lecture.url"> <br>
+        <label>Topic</label>
+        <input type="text" name="topic" class="form-control" ng-model="lecture.topic">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
 </div>
