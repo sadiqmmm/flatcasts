@@ -9,9 +9,11 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-<%= render 'layouts/navigation' %>
-<%= yield %>
-<div ui-view></div>
+<div class="flatback">
+  <%= render 'layouts/navigation' %>
+  <%= yield %>
+  <div ui-view></div>
+</div>
 <footer class="col-md-12 text-center">
   <small>&copy; 2016 Developed by <a href="http://www.brianemory.com">Brian Emory</a> | <a href="https://github.com/thebrianemory/flatcasts">GitHub <i class="fa fa-github"></i></a></small>
 </footer>
