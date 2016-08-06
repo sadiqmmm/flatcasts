@@ -4,6 +4,6 @@ function Lecture($resource) {
     });
   };
 
-Lecture.$inject = ['$resource']
+Lecture.$inject = ['$resource'];
 
 angular.module('Flatcasts').factory('Lecture', Lecture);
