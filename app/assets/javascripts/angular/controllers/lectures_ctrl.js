@@ -1,17 +1,13 @@
-function LecturesCtrl($scope, Lecture) {
-  // Variables - Private
+function LecturesCtrl($scope, Lecture, $filter) {
   var self = this;
-
-  // Variables - Public
-  self.filter = {};
-
   self.lectures = Lecture.query();
 
-  // Functions - Public
+  // Filter checkboxes for topics
+  self.filter = {};
+
   self.filterByTopic = filterByTopic;
   self.getTopics = getTopics;
 
-  // Functions - Definitions
   function filterByTopic(lecture) {
     return self.filter[lecture.topic] || noFilter(self.filter);
   }
@@ -27,8 +23,14 @@ function LecturesCtrl($scope, Lecture) {
       keys(filterObj).
       every(function (key) { return !filterObj[key]; });
   }
+
+  // Search bar for topics
+  self.refilter = function () {
+    self.filteredList = $filter('filter')(self.lectures, self.search)
+  };
+  self.refilter();
 };
 
-LecturesCtrl.$inject = ['$scope', 'Lecture'];
+LecturesCtrl.$inject = ['$scope', 'Lecture', '$filter'];
 
 angular.module('Flatcasts').controller('LecturesCtrl', LecturesCtrl);
