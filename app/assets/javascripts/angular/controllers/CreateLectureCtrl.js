@@ -19,7 +19,6 @@ function CreateLectureCtrl($scope, $http) {
     };
 };
 
+CreateLectureCtrl.$inject = ['$scope', '$http']
+
 angular.module('Flatcasts').controller('CreateLectureCtrl', CreateLectureCtrl);
-
-
-// https://www.youtube.com/watch?v=tf9l4tSDp6M
