@@ -1,5 +1,6 @@
 class Lecture < ActiveRecord::Base
   validates_presence_of :title, :topic, :duration, :url, :published, :embed
+  validates_uniqueness_of :url
 
   def self.import_youtube(url, topic)
     video = Yt::Video.new url: url
@@ -13,9 +14,4 @@ class Lecture < ActiveRecord::Base
 
     Lecture.create(title: title, topic: topic, url: url, duration: duration, published: published, embed: embed, video_id: video_id)
   end
-
-  # Lecture.import_youtube('https://www.youtube.com/watch?v=t2A6xPbh0I8', 'Ruby')
-
-  # Lecture.import_youtube('https://www.youtube.com/watch?v=9LDxP2W6hkw', 'Sonic Pi')
-
 end
