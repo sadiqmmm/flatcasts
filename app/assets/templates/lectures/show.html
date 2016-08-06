@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="well col-md-8">
+  <div class="well col-md-10 col-md-offset-1">
     <div ng-controller="LectureCtrl">
       <div id="lecture-list-container">
           <h3>{{lecture.title}} <small>({{lecture.duration}})</small></h3>
@@ -9,8 +9,8 @@
         <p><strong>Topic: {{lecture.topic}}</strong></p>
         <p>
           Published at {{lecture.published | date: 'mediumDate'}} <br>
-          <div class="text-center">
-            <youtube-video video-id="lectureEmbed"></youtube-video>
+          <div class="embed-responsive embed-responsive-16by9 text-center">
+            <youtube-video class="embed-responsive-item" video-id="lectureEmbed"></youtube-video>
           </div>
         </p>
       </div>
