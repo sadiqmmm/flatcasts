@@ -11,6 +11,7 @@ class LecturesController < ApplicationController
   def create
     url = params[:data][:url]
     topic = params[:data][:topic]
-    Lecture.import_youtube(url, topic)
+    lecture = Lecture.import_youtube(url, topic)
+    render json: lecture
   end
 end
