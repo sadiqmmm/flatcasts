@@ -1,26 +1,31 @@
-<div class="col-md-6 well">
-  <h1 class="text-center">Add new lecture</h1>
-  <div ng-controller="CreateLectureCtrl">
-    <form name="lectureForm" ng-submit="submitForm()">
-      <div class="form-group">
-        <label>Url</label>
-        <input type="url" name="url" class="form-control" ng-model="lecture.url" required="required">
-        <div ng-if="lectureForm.url.$touched && lectureForm.url.$error.required" class="alert-danger">
-          URL is required!
+<div class="container">
+  <div class="col-md-8 col-md-offset-2 well">
+    <h1 class="text-center">Add new lecture</h1>
+    <div ng-controller="CreateLectureCtrl">
+      <div class="col-md-8 col-md-offset-2">
+        <form name="lectureForm" ng-submit="submitForm()">
+          <div class="form-group">
+            <label>YouTube URL</label>
+            <input type="url" name="url" class="form-control" ng-model="lecture.url" required="required" placeholder="Must be a valid YouTube URL">
+            <div ng-if="lectureForm.url.$touched && lectureForm.url.$error.required" class="alert-danger">
+              URL is required!
+          </div>
+        <br>
+            <label>Topic</label>
+            <input type="text" name="topic" class="form-control" ng-model="lecture.topic" required="required" placeholder="e.g. Ruby, Angular, Guest Lecture, etc.">
+            <div ng-if="lectureForm.topic.$touched && lectureForm.topic.$error.required" class="alert-danger">
+              Topic is required!
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-    <br>
-        <label>Topic</label>
-        <input type="text" name="topic" class="form-control" ng-model="lecture.topic" required="required">
-        <div ng-if="lectureForm.topic.$touched && lectureForm.topic.$error.required" class="alert-danger">
-          Topic is required!
-        </div>
+    </div>
+    <div>
+      <div ng-if="lecture">
+        test
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-  <div>
-    <div ng-if="lecture">
-      test
     </div>
   </div>
+
 </div>
