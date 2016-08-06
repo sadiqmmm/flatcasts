@@ -3,7 +3,11 @@ Should have a filter box here
 <div ng-controller="LecturesCtrl">
   <div id="lecture-list-container">
     <div ng-repeat="lecture in lectures">
-      <p><a ui-sref="show({id: {{lecture.id}}})">{{lecture.title}} <small>({{lecture.duration}})</small></a></p>
+      <div id="lecture-{{lecture.id}}" class="well col-md-7">
+        <h4><a ui-sref="show({id: {{lecture.id}}})">{{ lecture.title }}</a> <small>({{ lecture.duration }})</small></h4>
+        <p>Topic: {{ lecture.topic }} <br>
+        <small>Published on {{ lecture.published }}</small></p>
+      </div>
     </div>
   </div>
 </div>
