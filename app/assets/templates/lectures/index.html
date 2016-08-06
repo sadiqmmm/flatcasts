@@ -2,10 +2,8 @@ Should have a filter box here
 
 <div ng-controller="LecturesCtrl">
   <div id="lecture-list-container">
-    <ul>
-      <li ng-repeat="lecture in lectures">
-        <h3><a ui-sref="show({id: {{lecture.id}}})">{{lecture.title}} <small>({{lecture.duration}})</small></a></h3>
-      </li>
-    </ul>
+    <div ng-repeat="lecture in lectures">
+      <p><a ui-sref="show({id: {{lecture.id}}})">{{lecture.title}} <small>({{lecture.duration}})</small></a></p>
+    </div>
   </div>
 </div>
