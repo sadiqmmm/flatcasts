@@ -1,7 +1,7 @@
 <div ng-controller="LecturesCtrl as ctrl">
   <div class="well col-md-7">
     <p>Filter by topic</p>
-    <div ng-repeat="topic in ctrl.getTopics()">
+    <div ng-repeat="topic in ctrl.getTopics()" class="topic_checkbox col-md-3">
       <label>
         <input type="checkbox" ng-model="ctrl.filter[topic]" />
         {{ topic }}
