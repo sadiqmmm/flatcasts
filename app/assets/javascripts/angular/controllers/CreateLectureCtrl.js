@@ -1,4 +1,4 @@
-function CreateLectureCtrl($scope, $http) {
+function CreateLectureCtrl($scope, $http, $location) {
   // create a blank object to handle form data.
     $scope.lecture = {};
   // calling our submit function.
@@ -14,11 +14,12 @@ function CreateLectureCtrl($scope, $http) {
           $scope.errorContent = data.errors.errorContent;
         } else {
           $scope.lecture = data.lecture;
+          $location.path('/lectures/' + data.id)
         }
       });
     };
 };
 
-CreateLectureCtrl.$inject = ['$scope', '$http']
+CreateLectureCtrl.$inject = ['$scope', '$http', '$location']
 
 angular.module('Flatcasts').controller('CreateLectureCtrl', CreateLectureCtrl);
