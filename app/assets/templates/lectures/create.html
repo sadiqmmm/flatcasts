@@ -4,7 +4,7 @@
     <form name="lectureForm" ng-submit="submitForm()">
       <div class="form-group">
         <label>Url</label>
-        <input type="text" name="url" class="form-control" ng-model="lecture.url" required="required">
+        <input type="url" name="url" class="form-control" ng-model="lecture.url" required="required">
         <div ng-if="lectureForm.url.$touched && lectureForm.url.$error.required" class="alert-danger">
           URL is required!
       </div>
