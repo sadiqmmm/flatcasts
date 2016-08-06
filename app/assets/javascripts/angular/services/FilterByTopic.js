@@ -10,11 +10,6 @@ function FilterByTopic() {
   self.filterByCategory = filterByCategory;
   self.getCategories = getCategories;
 
-  // Functions - Definitions
-  function filterByCategory(wine) {
-    return self.filter[wine.category] || noFilter(self.filter);
-  }
-
   function getCategories() {
     return (self.wines || []).
       map(function (wine) { return wine.category; }).
