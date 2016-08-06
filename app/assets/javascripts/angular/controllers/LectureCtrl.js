@@ -10,6 +10,6 @@ function LectureCtrl($scope, $http, $stateParams, GetLectureService) {
     })
 };
 
-LectureCtrl.$inject = ['$scope', '$http', '$stateParams', 'GetLectureService'];
+LectureCtrl.$inject = ['$scope', '$http', '$stateParams', 'GetLectureService', 'res'];
 
 angular.module('Flatcasts').controller('LectureCtrl', LectureCtrl);

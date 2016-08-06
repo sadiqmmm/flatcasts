@@ -7,6 +7,6 @@ function LecturesCtrl($scope, Lecture) {
     };
   };
 
-LecturesCtrl.$inject = ['$scope', 'Lecture'];
+LecturesCtrl.$inject = ['$scope', 'Lecture', 'lecture'];
 
 angular.module('Flatcasts').controller('LecturesCtrl', LecturesCtrl);
