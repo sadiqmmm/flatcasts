@@ -1,3 +1,10 @@
 <div class="col-md-6 well">
-  Lecture create page
+  <h1 class="text-center">Add new lecture</h1>
+  <form>
+    <label><strong>YouTube Url</strong></label>
+    <input ng-model="formData.newLectureUrl" placeholder="Add YouTube URL" type="text"><br>
+    <label><strong>Topic</strong></label>
+    <input type="text" ng-model="formData.newLectureTopic" placeholder="Add the topic here eg. Ruby"></input> <br>
+    <button class="btn btn-primary" ng-click="createLecture()">Create</button>
+  </form>
 </div>
