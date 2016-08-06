@@ -4,6 +4,6 @@ function GetLectureService($http) {
   }
 };
 
-GetLectureService.$inject = ['$http', 'id'];
+GetLectureService.$inject = ['$http'];
 
 angular.module('Flatcasts').service('GetLectureService', GetLectureService);

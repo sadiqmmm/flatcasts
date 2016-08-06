@@ -20,6 +20,6 @@ function CreateLectureCtrl($scope, $http, $location) {
     };
 };
 
-CreateLectureCtrl.$inject = ['$scope', '$http', '$location', 'data'];
+CreateLectureCtrl.$inject = ['$scope', '$http', '$location'];
 
 angular.module('Flatcasts').controller('CreateLectureCtrl', CreateLectureCtrl);
