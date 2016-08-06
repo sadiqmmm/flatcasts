@@ -20,7 +20,7 @@ angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templa
     })
     .state('show', {
       url: '/lectures/:id',
-      controller: 'LecturesCtrl as lecture',
+      controller: 'LectureCtrl as lecture',
       templateUrl: 'lectures/show.html'
     })
     .state('about', {
