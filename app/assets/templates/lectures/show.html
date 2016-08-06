@@ -1,14 +1,19 @@
-<div ng-controller="LectureCtrl">
-  <div id="lecture-list-container">
-      <h3>{{lecture.title}} <small>({{lecture.duration}})</small></h3>
-  </div>
+<div class="container">
+  <div class="well col-md-8">
+    <div ng-controller="LectureCtrl">
+      <div id="lecture-list-container">
+          <h3>{{lecture.title}} <small>({{lecture.duration}})</small></h3>
+      </div>
 
-  <div id="lecture-view-container">
-    <p>Topic: {{lecture.topic}}</p>
-    <p>
-      Published at {{lecture.published | date: 'mediumDate'}}
-      - <a ng-href="{{lecture.url}}">{{lecture.url}}</a> <br>
-      <youtube-video video-id="lectureEmbed"></youtube-video>
-    </p>
+      <div id="lecture-view-container">
+        <p><strong>Topic: {{lecture.topic}}</strong></p>
+        <p>
+          Published at {{lecture.published | date: 'mediumDate'}} <br>
+          <div class="text-center">
+            <youtube-video video-id="lectureEmbed"></youtube-video>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
