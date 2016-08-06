@@ -5,16 +5,6 @@ function FilterByTopic() {
 
   // Variables - Public
   self.filter = {};
-  self.wines = [
-    {name: 'Wine A', category: 'red'},
-    {name: 'Wine B', category: 'red'},
-    {name: 'Wine C', category: 'white'},
-    {name: 'Wine D', category: 'red'},
-    {name: 'Wine E', category: 'red'},
-    {name: 'Wine F', category: 'white'},
-    {name: 'Wine G', category: 'champagne'},
-    {name: 'Wine H', category: 'champagne'}
-  ];
 
   // Functions - Public
   self.filterByCategory = filterByCategory;
