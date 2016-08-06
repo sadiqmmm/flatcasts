@@ -12,6 +12,9 @@
     <p>Search</p>
     <input ng-model="lecture.search" ng-change="lecture.refilter()" />
   </div>
+  <div class="well col-md-7">
+    <a ui-sref="create">Add a missing lecture</a>
+  </div>
   <div id="lecture-list-container">
     <div ng-repeat="lecture in (lecture.filteredList | filter:lecture.filterByTopic) as filteredLectures">
       <div id="lecture-{{lecture.id}}" class="well col-md-7">
