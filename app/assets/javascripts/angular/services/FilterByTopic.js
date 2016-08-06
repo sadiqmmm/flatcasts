@@ -7,12 +7,12 @@ function FilterByTopic() {
   self.filter = {};
 
   // Functions - Public
-  self.filterByCategory = filterByCategory;
-  self.getCategories = getCategories;
+  self.filterByTopic = filterByTopic;
+  self.Topics = Topics;
 
-  function getCategories() {
-    return (self.wines || []).
-      map(function (wine) { return wine.category; }).
+  function getTopics() {
+    return (self.lectures || []).
+      map(function (lecture) { return lecture.topic; }).
       filter(function (cat, idx, arr) { return arr.indexOf(cat) === idx; });
   }
 
