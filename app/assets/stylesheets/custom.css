@@ -11,10 +11,7 @@
 }
 
 .title {
-  position: relative;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 50px;
   color: white;
   text-align: center;
 }
@@ -22,7 +19,7 @@
 .header-h1 {
   text-transform: uppercase;
   margin: 0;
-  font-size: 4em;
+  font-size: 3.5em;
   color: white;
 }
 
