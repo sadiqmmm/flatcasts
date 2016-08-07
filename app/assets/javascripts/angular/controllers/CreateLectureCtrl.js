@@ -12,8 +12,9 @@ function CreateLectureCtrl($scope, $http, $location, $window, Lecture, $filter) 
       .success(function(data) {
           $scope.lecture = data.lecture;
           if (data.id === null) {
-            var url = data.url
-            var found = $filter('filter')($scope.lectures, {url: url}, true);
+            debugger;
+            var video_id = data.video_id
+            var found = $filter('filter')($scope.lectures, {video_id: video_id}, true);
             $window.location.href = '/#/lectures/' + found[0].id;
           } else {
             $location.path('/lectures/' + data.id)
