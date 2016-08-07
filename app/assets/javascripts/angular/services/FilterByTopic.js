@@ -1,12 +1,8 @@
-// Functions - Definitions
 function FilterByTopic() {
-  // Variables - Private
   var self = this;
 
-  // Variables - Public
   self.filter = {};
 
-  // Functions - Public
   self.filterByTopic = filterByTopic;
   self.Topics = Topics;
 
