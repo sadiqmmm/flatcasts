@@ -1,5 +1,7 @@
 angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templates', 'angularUtils.directives.dirPagination'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, paginationTemplateProvider) {
+    paginationTemplateProvider.setPath('pagination/mine.tpl.html');
+
     $stateProvider
     .state('home', {
       url: '/',
