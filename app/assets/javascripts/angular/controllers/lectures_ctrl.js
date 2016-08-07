@@ -2,7 +2,6 @@ function LecturesCtrl($scope, Lecture, $filter) {
   var self = this;
   self.lectures = Lecture.query();
 
-  // Filter checkboxes for topics
   self.filter = {};
 
   self.filterByTopic = filterByTopic;
@@ -24,7 +23,6 @@ function LecturesCtrl($scope, Lecture, $filter) {
       every(function (key) { return !filterObj[key]; });
   }
 
-  // Search bar for topics
   self.refilter = function () {
     self.filteredList = $filter('filter')(self.lectures, self.search)
   };

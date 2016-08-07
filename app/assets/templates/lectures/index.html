@@ -2,7 +2,6 @@
   <div ng-controller="LecturesCtrl as lecture">
     <div class="well col-md-10 col-md-offset-1">
       <h3>You can filter by topic and/or search for a lecture</h3>
-      <br>
       <div ng-repeat="topic in lecture.getTopics()" class="topic_checkbox col-md-3">
         <label class="checkbox-inline">
           <input type="checkbox" ng-model="lecture.filter[topic]" />
@@ -12,6 +11,7 @@
       <div class="col-md-12">
         <br>
         <div class="input-group input-group-md">
+
           <span class="input-group-addon" id="sizing-addon1">Search</span>
           <input ng-model="lecture.search" ng-change="lecture.refilter()" class="form-control" placeholder="e.g. Ruby, Rails, JavaScript, etc." />
         </div>
