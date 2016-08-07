@@ -14,10 +14,6 @@ angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templa
       url: '/lectures/create',
       templateUrl: 'lectures/create.html'
     })
-    .state('search', {
-      url: '/lectures/search',
-      templateUrl: 'lectures/search.html'
-    })
     .state('show', {
       url: '/lectures/:id',
       controller: 'LectureCtrl as lecture',
