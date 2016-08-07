@@ -6,7 +6,7 @@ Flatcasts is your all-in-one stop for Flatiron lecture videos. You can search an
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/thebrianemory/corneal This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/thebrianemory/flatcasts This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 Copyright (c) 2016 Brian Emory
