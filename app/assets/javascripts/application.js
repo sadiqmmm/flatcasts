@@ -16,6 +16,7 @@
 //= require angular
 //= require angular-resource
 //= require local_time
+//= require dirPagination
 //= require angular-youtube-embed
 //= require angular-ui-router
 //= require angular-rails-templates

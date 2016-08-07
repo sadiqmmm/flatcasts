@@ -1,4 +1,4 @@
-angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templates'])
+angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templates', 'angularUtils.directives.dirPagination'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {
