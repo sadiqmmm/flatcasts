@@ -18,7 +18,7 @@
         <hr class="style-four">
       </div>
       <div id="lecture-list-container">
-        <div dir-paginate="lecture in (lecture.filteredList | filter:lecture.filterByTopic | itemsPerPage: 5) as filteredLectures">
+        <div dir-paginate="lecture in (lecture.filteredList | filter:lecture.filterByTopic | itemsPerPage: 10) as filteredLectures">
           <div id="lecture-{{lecture.id}}" class="col-md-12">
             <h4><a ui-sref="show({id: {{lecture.id}}})">{{ lecture.title }}</a> <small>({{ lecture.duration }})</small></h4>
             <p><strong>Topic: {{ lecture.topic }}</strong> <br>
