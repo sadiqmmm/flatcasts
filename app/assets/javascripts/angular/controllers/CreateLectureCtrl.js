@@ -10,6 +10,7 @@ function CreateLectureCtrl($scope, $http, $location, $window) {
       .success(function(data) {
           $scope.lecture = data.lecture;
           if (data.id === null) {
+            
             $window.location.href = '/#/lectures';
           } else {
             $location.path('/lectures/' + data.id)
