@@ -2,7 +2,11 @@
 An Angular front-end with a Rails back-end
 
 ## Flatcasts
-Flatcasts is your all-in-one stop for Flatiron lecture videos. You can search and filter by topic to find just what you want to watch in the embedded player.
+For my final project at [Flatiron School's](http://www.flatironschoo.com) online campus, I decided to make something to ease a reoccurring problem: finding a lecture. It is all too common in our Slack channel to see someone looking for a particular lecture. There were Google docs but you could not always find the lecture you wanted.
+
+Enter Flatcasts. A community maintained, one-stop shop for all Flatiron lectures. Lectures can be easily added to the database by simply entering in the YouTube URL and lecture topic. The lecture will then be able to be found on the lectures page. You can filter by topic or search for a particularly lecture. All lectures can be watched right on the site with the embedded YouTube.
+
+If you find any issues or bugs, let me know about them on [Twitter](http://twitter.com/thebrianemory), or open up an issue here.
 
 ## Contributing
 
