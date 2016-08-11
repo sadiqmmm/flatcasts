@@ -16,7 +16,7 @@ class Lecture < ActiveRecord::Base
   end
 
   def add_vote
-    self.upvote += 1
+    self.upvotes += 1
     self.save
   end
 end
