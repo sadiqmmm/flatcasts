@@ -16,13 +16,13 @@ class Lecture < ActiveRecord::Base
   end
 
   def up_vote
-    self.upvotes += 1
+    self.votes += 1
     self.save
   end
 
   def down_vote
-    if self.upvotes > 0
-      self.upvotes -= 1
+    if self.votes > 0
+      self.votes -= 1
       self.save
     end
   end

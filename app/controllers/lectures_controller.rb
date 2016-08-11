@@ -15,9 +15,15 @@ class LecturesController < ApplicationController
     render json: lecture
   end
 
-  def vote
+  def add_vote
     lecture = Lecture.find(params[:id])
-    lecture.add_vote
+    lecture.up_vote
+    render json: lecture
+  end
+
+  def subtract_vote
+    lecture = Lecture.find(params[:id])
+    lecture.down_vote
     render json: lecture
   end
 end
