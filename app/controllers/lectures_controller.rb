@@ -14,4 +14,10 @@ class LecturesController < ApplicationController
     lecture = Lecture.import_youtube(url, topic)
     render json: lecture
   end
+
+  def vote
+    lecture = Lecture.find(params[:id])
+    lecture.add_vote
+    render json: lecture
+  end
 end

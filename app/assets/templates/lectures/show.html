@@ -6,7 +6,13 @@
       </div>
 
       <div id="lecture-view-container">
-        <p><strong>Topic: {{lecture.topic}}</strong></p>
+        <p><strong>Topic: {{lecture.topic}}</strong>
+          <div ng-controller="UpVote">
+            <button type="button" name="vote" ng-click="submitForm()">Upvote</button>
+          </div>
+
+          </div>
+        </p>
         <p>
           Published at {{lecture.published | date: 'mediumDate'}} <br>
           <div class="embed-responsive embed-responsive-16by9 text-center">

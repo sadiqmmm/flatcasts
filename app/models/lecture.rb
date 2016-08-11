@@ -14,4 +14,9 @@ class Lecture < ActiveRecord::Base
 
     Lecture.create(title: title, topic: topic, url: url, duration: duration, published: published, embed: embed, video_id: video_id)
   end
+
+  def add_vote
+    self.upvote += 1
+    self.save
+  end
 end
