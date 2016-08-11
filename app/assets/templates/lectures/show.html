@@ -7,8 +7,9 @@
 
       <div id="lecture-view-container">
         <p><strong>Topic: {{lecture.topic}}</strong>
-          <div ng-controller="UpVote">
-            <button type="button" name="vote" ng-click="submitForm()">Upvote</button>
+          <div ng-controller="Voting">
+            <button type="button" name="vote" ng-click="upVote()">Up Vote</button>
+            <button type="button" name="vote" ng-click="downVote()">Down Vote</button>
           </div>
 
           </div>
