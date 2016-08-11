@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     get "/lectures(.:format)" => "lectures#index"
     get "/lectures/:id(.:format)" => "lectures#show"
     post "/lectures" => "lectures#create"
-    put "/lectures/:id/vote(.:format)" => "lectures#add_vote"
-    put "/lectures/:id/vote(.:format)" => "lectures#subtract_vote"
+    put "/lectures/:id/up_vote(.:format)" => "lectures#add_vote"
+    put "/lectures/:id/down_vote(.:format)" => "lectures#subtract_vote"
   end
 
   root to: "home#index"
