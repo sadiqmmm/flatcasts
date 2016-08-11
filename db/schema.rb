@@ -24,9 +24,10 @@ ActiveRecord::Schema.define(version: 20160811132637) do
     t.string   "published"
     t.string   "embed"
     t.string   "video_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "upvotes"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "upvotes",    default: 0
+    t.integer  "downvotes",  default: 0
   end
 
 end
