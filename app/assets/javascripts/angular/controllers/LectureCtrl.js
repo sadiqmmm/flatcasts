@@ -1,8 +1,7 @@
 function LectureCtrl($scope, $http, $stateParams, GetLectureService) {
   var lectureId = $stateParams.id;
 
-  this.lecture = GetLectureService.getLecture(lectureId);
-  GetLectureService
+  this.lecture = GetLectureService
     .getLecture(lectureId)
     .then(function (res) {
       $scope.lecture = res.data;
