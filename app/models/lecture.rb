@@ -15,11 +15,15 @@ class Lecture < ActiveRecord::Base
     Lecture.create(title: title, topic: topic, url: url, duration: duration, published: published, embed: embed, video_id: video_id)
   end
 
-  def add_vote
-    if self.upvotes == nil
-      self.upvotes = 0
-    end
+  def up_vote
     self.upvotes += 1
     self.save
+  end
+
+  def down_vote
+    if self.upvotes > 0
+      self.upvotes -= 1
+      self.save
+    end
   end
 end
