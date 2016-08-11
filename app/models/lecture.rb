@@ -16,6 +16,9 @@ class Lecture < ActiveRecord::Base
   end
 
   def add_vote
+    if self.upvotes == nil
+      self.upvotes = 0
+    end
     self.upvotes += 1
     self.save
   end
