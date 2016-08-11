@@ -3,23 +3,22 @@ function Voting($scope, $http, Lecture, $stateParams, GetLectureService) {
     var self = this;
     var lectureId = $stateParams.id;
 
-    this.lecture = GetLectureService
-      .getLecture(lectureId)
-      .then(function (res) {
-        $scope.lecture = res.data;
-      })
+    function updateVote() {
+      this.lecture = GetLectureService
+        .getLecture(lectureId)
+        .then(function (res) {
+          $scope.lecture = res.data;
+        })
+    }
+
+    updateVote();
 
     $scope.upVote = function() {
     $http({
       method  : 'PUT',
       url     : '/api/lectures/' + lectureId + '/up_vote',
      })
-     this.lecture = GetLectureService
-       .getLecture(lectureId)
-       .then(function (res) {
-         $scope.lecture = res.data;
-         $scope.lectureEmbed = $scope.lecture.video_id;
-       })
+     updateVote();
     };
 
     $scope.downVote = function() {
@@ -27,12 +26,7 @@ function Voting($scope, $http, Lecture, $stateParams, GetLectureService) {
       method  : 'PUT',
       url     : '/api/lectures/' + lectureId + '/down_vote',
      })
-     this.lecture = GetLectureService
-       .getLecture(lectureId)
-       .then(function (res) {
-         $scope.lecture = res.data;
-         $scope.lectureEmbed = $scope.lecture.video_id;
-       })
+     updateVote();
     };
 };
 
