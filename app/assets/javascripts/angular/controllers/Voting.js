@@ -1,35 +1,22 @@
-function Voting($scope, $http, Lecture, $stateParams, GetLectureService) {
+function Voting($scope, $http, Lecture, $stateParams, GetLectureService, UpdateVoteService) {
     $scope.lecture = {};
     var self = this;
     var lectureId = $stateParams.id;
 
-    function updateVote() {
-      this.lecture = GetLectureService
-        .getLecture(lectureId)
-        .then(function (res) {
-          $scope.lecture = res.data;
-        })
-    }
-
-    updateVote();
+    UpdateVoteService
+      .voteCount(lectureId, $scope)
 
     $scope.upVote = function() {
-    $http({
-      method  : 'PUT',
-      url     : '/api/lectures/' + lectureId + '/up_vote',
-     })
-     updateVote();
+      UpdateVoteService
+        .upVote(lectureId, $scope)
     };
 
     $scope.downVote = function() {
-    $http({
-      method  : 'PUT',
-      url     : '/api/lectures/' + lectureId + '/down_vote',
-     })
-     updateVote();
+      UpdateVoteService
+        .downVote(lectureId, $scope)
     };
 };
 
-Voting.$inject = ['$scope', '$http', 'Lecture', '$stateParams', 'GetLectureService'];
+Voting.$inject = ['$scope', '$http', 'Lecture', '$stateParams', 'GetLectureService', 'UpdateVoteService'];
 
 angular.module('Flatcasts').controller('Voting', Voting);
