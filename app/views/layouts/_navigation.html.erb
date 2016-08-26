@@ -17,7 +17,12 @@
         <li><a ui-sref="lecture">Lectures</a></li>
         <li><a ui-sref="create">Add Lecture</a></li>
         <li><a ui-sref="about">About</a></li>
-        <li><%= link_to 'Sign In With GitHub', '/auth/github' %></li>
+          <% if current_user %>
+          <li><%= link_to 'Profile', user_path(current_user) %></li>
+            <li><%= link_to 'Sign Out', '/signout' %></li>
+          <% else %>
+            <li><%= link_to 'Sign In With GitHub', '/auth/github' %></li>
+          <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
