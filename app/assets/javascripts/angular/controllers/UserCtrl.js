@@ -1,4 +1,5 @@
 function UserCtrl($scope, $http, $stateParams, GetUserService) {
+  debugger;
   var userId = $stateParams.id;
 
   this.user = GetUserService.getUser(userId);
