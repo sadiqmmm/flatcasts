@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :github_uid, null: false
       t.string :name, null: false
       t.string :display_name
-      t.string :email
 
       t.timestamps null: false
     end

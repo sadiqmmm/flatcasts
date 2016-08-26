@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160826153655) do
     t.string   "github_uid",   null: false
     t.string   "name",         null: false
     t.string   "display_name"
-    t.string   "email"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
