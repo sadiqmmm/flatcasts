@@ -27,6 +27,7 @@ angular.module('Flatcasts', ['ngResource', 'youtube-embed', 'ui.router', 'templa
     })
     .state('profile', {
       url: '/users/:id',
+      controller: 'UserCtrl as user',
       templateUrl: 'users/show.html'
     })
 
