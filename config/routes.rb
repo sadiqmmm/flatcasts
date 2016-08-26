@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get "/lectures(.:format)" => "lectures#index"
     get "/lectures/:id(.:format)" => "lectures#show"
     post "/lectures" => "lectures#create"
+    get "/users/:id(.:format)" => "users#show"
   end
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
