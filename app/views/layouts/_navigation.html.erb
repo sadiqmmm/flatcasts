@@ -21,7 +21,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li ng-controller="UserCtrl as user"><a ui-sref="profile">Profile</a></li>
+                <li><%= link_to 'Profile', "/users/#{current_user.id}" %></li>
                 <li><%= link_to 'Sign Out', '/signout' %></li>
               </ul>
             </li>
