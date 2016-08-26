@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     get "/lectures/:id(.:format)" => "lectures#show"
     post "/lectures" => "lectures#create"
   end
-
+  get '/auth/:provider/callback', to: 'sessions#create'
+  
   root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
