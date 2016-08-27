@@ -14,14 +14,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="lecture">Lectures</a></li>
-        <li><a ui-sref="create">Add Lecture</a></li>
+        <% if current_user %>
+          <li><a ui-sref="lecture">Lectures</a></li>
+          <li><a ui-sref="create">Add Lecture</a></li>
+        <% end %>
         <li><a ui-sref="about">About</a></li>
-          <% if current_user %>
-            <li><%= link_to 'Sign Out', '/signout' %></li>
-          <% else %>
-            <li><%= link_to 'Sign In With GitHub', '/auth/github' %></li>
-          <% end %>
+        <% if current_user %>
+          <li><%= link_to 'Sign Out', '/signout' %></li>
+        <% else %>
+          <li><%= link_to 'Sign In With GitHub', '/auth/github' %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
