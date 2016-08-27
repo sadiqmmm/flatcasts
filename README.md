@@ -7,10 +7,10 @@ For my final project at [Flatiron School's](http://www.flatironschoo.com) online
 Enter Flatcasts. A community maintained, one-stop shop for all Flatiron lectures. Lectures can be easily added to the database by simply entering in the YouTube URL and lecture topic. The lecture will then be able to be found on the lectures page. You can filter by topic or search for a particularly lecture. All lectures can be watched right on the site with the embedded YouTube.
 
 ## Future features
-1. Github login
-2. Ability to favorite lectures
-3. Ability to mark a lecture as watched
-4. Ability to add notes
+1. [X] Github login
+2. [ ] Ability to favorite lectures
+3. [ ] Ability to mark a lecture as watched
+4. [ ] Ability to add notes
 
 ## Bugs
 
