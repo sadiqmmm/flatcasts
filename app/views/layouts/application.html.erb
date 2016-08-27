@@ -12,7 +12,13 @@
 <div class="flatback">
   <%= render 'layouts/navigation' %>
   <!-- <%= yield %> -->
-  <div ui-view></div>
+  <div ui-view>
+    <% if current_user %>
+      <script>
+        var current_user = <%=raw current_user.to_json  %>
+      </script>
+    <% end %>
+  </div>
 </div>
 <footer class="col-md-12 text-center">
   <small>&copy; 2016 Developed by <a href="http://www.brianemory.com">Brian Emory</a> for my fellow <a href="http://www.flatironschool.com" target="_blank">Flatiron School</a> students</small>
