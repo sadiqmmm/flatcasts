@@ -15,7 +15,7 @@
   <div ui-view>
     <% if current_user %>
       <script>
-        var current_user = <%=raw current_user.to_json  %>
+        var current_user = <%= raw current_user.to_json  %>
       </script>
     <% end %>
   </div>
