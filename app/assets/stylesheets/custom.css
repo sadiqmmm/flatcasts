@@ -46,3 +46,15 @@ hr.style-four {
 .label_checkbox {
   font-weight: normal;
 }
+
+.like-star, .like-star:hover, .like-star:focus {
+  text-decoration: none;
+  color: gray;
+  outline: 0;
+}
+
+.unlike-star, .unlike-star:hover, .unlike-star:focus {
+  text-decoration: none;
+  color: yellow;
+  outline: 0;
+}
