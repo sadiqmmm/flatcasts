@@ -1,6 +1,7 @@
 class Lecture < ActiveRecord::Base
   validates_presence_of :title, :topic, :duration, :url, :published, :embed, :video_id
   validates_uniqueness_of :video_id
+  acts_as_votable
 
   def self.import_youtube(url, topic)
     video = Yt::Video.new url: url
