@@ -2,7 +2,7 @@
   <div class="well col-md-10 col-md-offset-1">
     <div ng-controller="LectureCtrl">
       <div id="lecture-list-container">
-          <h3>{{lecture.title}} <small>({{lecture.duration}})</small> <button class="btn-link"><i class="fa fa-star fa-2x like-star"></i></button></h3>
+          <h3>{{lecture.title}} <small>({{lecture.duration}})</small> <span><button class="btn-link" type="button" name="favorite" ng-click="addFavorite()"><i class="fa fa-star fa-2x like-star"></i></button></span></h3>
       </div>
 
       <div id="lecture-view-container">
