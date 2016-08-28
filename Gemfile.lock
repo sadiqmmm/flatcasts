@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     angular-rails-templates (1.0.0)
       railties (>= 4.2, < 6)
       sprockets (~> 3.0)
@@ -191,6 +192,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable
   angular-rails-templates
   angularjs-rails
   bootstrap-sass
