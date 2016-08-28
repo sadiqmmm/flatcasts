@@ -24,9 +24,8 @@ ActiveRecord::Schema.define(version: 20160826160043) do
     t.string   "published"
     t.string   "embed"
     t.string   "video_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "votes",      default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
