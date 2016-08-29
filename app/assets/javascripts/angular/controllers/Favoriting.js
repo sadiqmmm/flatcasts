@@ -1,4 +1,4 @@
-function Favoriting($scope, $http, Lecture, $stateParams, GetLectureService, AddFavoriteService) {
+function Favoriting($scope, $http, Lecture, $stateParams, AddFavoriteService) {
     $scope.lecture = {};
     var self = this;
     var lectureId = $stateParams.id;
@@ -10,6 +10,6 @@ function Favoriting($scope, $http, Lecture, $stateParams, GetLectureService, Add
 
 };
 
-Favoriting.$inject = ['$scope', '$http', 'Lecture', '$stateParams', 'GetLectureService', 'AddFavoriteService'];
+Favoriting.$inject = ['$scope', '$http', 'Lecture', '$stateParams', 'AddFavoriteService'];
 
 angular.module('Flatcasts').controller('Favoriting', Favoriting);
