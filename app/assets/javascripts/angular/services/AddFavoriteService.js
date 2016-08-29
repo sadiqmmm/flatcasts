@@ -3,9 +3,8 @@ function AddFavoriteService($http, GetLectureService) {
     this.addFavorite = function(lectureId, $scope) {
     $http({
       method  : 'PUT',
-      url     : '/api/lectures/' + lectureId + '/up_vote',
+      url     : '/api/lectures/' + lectureId + '/add_favorite',
      })
-     this.voteCount(lectureId, $scope);
     };
 }
 
