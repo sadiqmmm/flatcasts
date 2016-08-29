@@ -4,6 +4,9 @@ function Favoriting($scope, $http, Lecture, $stateParams, FavoriteService) {
     var lectureId = $stateParams.id;
     var userId = current_user.id
 
+    FavoriteService
+      .isFavorited(lectureId, $scope, userId)
+
     $scope.addFavorite = function() {
       FavoriteService
         .addFavorite(lectureId, $scope, userId)

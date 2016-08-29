@@ -1,5 +1,12 @@
 function FavoriteService($http) {
 
+  this.isFavorited = function (lectureId, $scope, userId) {
+    $http({
+      method  : 'GET',
+      url     : '/api/lectures/' + lectureId + '/' + userId + '/favorited',
+     })
+  }
+
     this.addFavorite = function(lectureId, $scope, userId) {
     $http({
       method  : 'PUT',
