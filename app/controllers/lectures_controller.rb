@@ -14,4 +14,9 @@ class LecturesController < ApplicationController
     lecture = Lecture.import_youtube(url, topic)
     render json: lecture
   end
+
+  def add_favorite
+    lecture = Lecture.find(params[:id])
+    user = User.find(params[:userid])
+  end
 end
