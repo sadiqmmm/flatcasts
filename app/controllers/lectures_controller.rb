@@ -15,7 +15,21 @@ class LecturesController < ApplicationController
     render json: lecture
   end
 
+  def favorited
+    binding.pry
+    lecture_params
+  end
+
   def add_favorite
+    lecture_params
+  end
+
+  def remove_favorite
+    lecture_params
+  end
+
+  private
+  def lecture_params
     lecture = Lecture.find(params[:id])
     user = User.find(params[:userid])
   end
