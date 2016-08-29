@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get "/lectures/:id(.:format)" => "lectures#show"
     post "/lectures" => "lectures#create"
     get "/users/:id(.:format)" => "users#show"
+    put "/lectures/:id/add_favorite(.:format)" => "lectures#add_favorite"
   end
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
