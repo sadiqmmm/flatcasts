@@ -1,9 +1,9 @@
 function AddFavoriteService($http) {
 
-    this.addFavorite = function(lectureId, $scope) {
+    this.addFavorite = function(lectureId, $scope, userId) {
     $http({
       method  : 'PUT',
-      url     : '/api/lectures/' + lectureId + '/add_favorite',
+      url     : '/api/lectures/' + lectureId + '/' + userId + '/add_favorite',
      })
     };
 }
