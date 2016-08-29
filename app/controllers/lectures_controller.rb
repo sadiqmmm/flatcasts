@@ -21,10 +21,12 @@ class LecturesController < ApplicationController
   end
 
   def add_favorite
+    binding.pry
     lecture_params
   end
 
   def remove_favorite
+    binding.pry
     lecture_params
   end
 
