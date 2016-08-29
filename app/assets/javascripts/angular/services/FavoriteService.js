@@ -1,4 +1,4 @@
-function AddFavoriteService($http) {
+function FavoriteService($http) {
 
     this.addFavorite = function(lectureId, $scope, userId) {
     $http({
@@ -8,6 +8,6 @@ function AddFavoriteService($http) {
     };
 }
 
-AddFavoriteService.$inject = ['$http']
+FavoriteService.$inject = ['$http']
 
-angular.module('Flatcasts').service('AddFavoriteService', AddFavoriteService);
+angular.module('Flatcasts').service('FavoriteService', FavoriteService);
