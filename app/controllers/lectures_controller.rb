@@ -32,7 +32,7 @@ class LecturesController < ApplicationController
 
   private
   def lecture_params
-    lecture = Lecture.find(params[:id])
-    user = User.find(params[:userid])
+    @lecture = Lecture.find(params[:id])
+    @user = User.find(params[:userid])
   end
 end
